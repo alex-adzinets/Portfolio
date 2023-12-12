@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'RockSalt';
+    src: url(/fonts/Rock_Salt/RockSalt-Regular.ttf);
+}
+@font-face {
+    font-family: 'Great-vibes';
+    src: url(/fonts/great-vibes/GreatVibes-Regular.ttf);
+}
+@layer base {
+    @import url(/fonts/eklektyk/stylesheet.css);
+    @import url(../public/fonts/LandRover/stylesheet.css);    
+    /*@import url(../public/fonts/neutraface/stylesheet.css);
+    @import url(../public/fonts/Inter/stylesheet.css); */
+}
+
+::selection{
+    background-color: hotpink;
+}
+
+.Deleloper{
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: white;
+}
+.meme{
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+}
+.skill{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
