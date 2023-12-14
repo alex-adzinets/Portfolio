@@ -68,7 +68,6 @@ const Hero = (props) => {
         <div className=" ml-[-10%]">
               <motion.img className="bg-[#1e1e1e] absolute"  animate ={{y: [-20,10, -20], opacity:[0,1,0],transition:{duration:3,repeat: Infinity,ease:"anticipate"}}}  src={scrollDown} alt="scroll down png" />
               <motion.img className="bg-[#1e1e1e] absolute"  animate ={{y: [-20,0, -20], opacity:[0,1,0],transition:{duration:3,repeat: Infinity,ease:"anticipate"}}}  src={scrollDown} alt="scroll down png" />
-          
         </div>
       </div>
     </motion.section>
