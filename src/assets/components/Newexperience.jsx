@@ -67,7 +67,7 @@ const Newexperience = () => {
                         Product Dev Intern
                         </div>
                         <motion.div style={{}} className=" font-LandRover text-sm">
-                        <div>2023, sept -2023, Nov</div>
+                        <div>2022, Mar -2023, Mar</div>
                         <div>@Buissniess Invvovation Club</div>
                         </motion.div>
                     </motion.div>
