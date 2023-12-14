@@ -8,30 +8,30 @@ const Portfoliolist = (props) => {
         1:
         {
             number: '01',
-            title: 'AI Magix Homepage',
-            description:'An Intdustial standard home page,web page,developed using angular'
-
+            title: 'My Portfolio',
+            description:'A WebPage for Showcasing my Perivious Work developed Using React, Vite, TailwindCss and Framer  Motion ️⭐ ',
+            link:'https://github.com/gururock007/Portfolio'
         },
         2:
         {
             number: '02',
             title: 'AI Magix Homepage',
-            description:'An Intdustial standard home page,web page,developed using angular'
-
+            description:'An Intdustial standard home page,web page,developed using Angular ⛈️',
+            link:''
         },
         3:
         {
             number: '03',
-            title: 'AI Magix Homepage',
-            description:'An Intdustial standard home page,web page,developed using angular'
-
+            title: 'Mobile Prediction',
+            description:'Python-based model predicts smartphone prices with scikit-learn. Trained on features like RAM, camera, and battery, with data from a diverse device set.⚡️',
+            link:'https://github.com/gururock007/mobile_price_prediction_model'
         },
         4:
         {
             number: '04',
-            title: 'AI Magix Homepage',
-            description:'An Intdustial standard home page,web page,developed using angular'
-
+            title: 'OTPfiy',
+            description:'Your lightning-fast OTP solution for small projects, ditching complexity for instant verification magic. ✨',
+            link: ''
         },
     }
     
@@ -54,14 +54,14 @@ const Portfoliolist = (props) => {
       className=" text-center ps-10 pe-10 pb-4">
         {
             Object.keys(data).map((key) => (
-                <a href="" key={key}>
+                <a href={data[key].link} key={key}>
                     <motion.div
                         // eslint-disable-next-line react/prop-types
                         onMouseEnter={props.setCursorState[0]}
                         // eslint-disable-next-line react/prop-types
                         onMouseLeave={props.setCursorState[1]}
                         variants={variantBox}
-                        className=" border-b-2 grid grid-cols-8 pt-4 pb-4 gap-5">
+                        className=" border-b-2 grid grid-cols-8 pt-4 pb-4 gap-5 items-center">
                         <div className=" md:text-6xl text-2xl font-Eklektyk ">
                             {data[key].number}
                         </div>
