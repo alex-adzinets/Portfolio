@@ -7,8 +7,9 @@ import { useEffect, useState } from 'react'
 import Portfolio from './assets/components/Portfolio'
 import Loader from './assets/components/loader'
 import Contact from './assets/components/Contact'
-import Experience from './assets/components/Experience'
+// import Experience from './assets/components/Experience'
 import NewAboutMe from './assets/components/NewAboutMe'
+import Newexperience from './assets/components/Newexperience'
 
 function App( ) {
 
@@ -34,7 +35,8 @@ function App( ) {
         <NewAboutMe setCursorState = {setCursorState} />
         {/* <Aboutme setCursorState={setCursorState} /> */}
         <Skill setCursorState = {setCursorState} />
-        <Experience setCursorState = {setCursorState} />
+        {/* <Experience setCursorState = {setCursorState} /> */}
+        <Newexperience setCursorState = {setCursorState} />
         <Portfolio setCursorState = {setCursorState} />
         <Contact setCursorState = {setCursorState} />
     </main>: <Loader />}
