@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import download from '/images/icons/download.png'
 import scrollDown from '/images/icons/down-arrow.png'
 import AnimatedText from "./AnimatedText"
+import CV from '/Gurushik_resume.pdf'
 
 const Hero = (props) => {
 
@@ -37,7 +38,8 @@ const Hero = (props) => {
     className=" container mx-auto text-white ">
       <div className="p-4 flex justify-center text-center ">
         <motion.a 
-        href="" 
+        href={CV}
+        download={CV} 
         variants={fadeIn}  
         whileHover={{scale:1.1, transition:{type: 'spring', stiffness:400, damping:13, duration: 0.5}}} 
         whileTap={{scale:0.9}} 
