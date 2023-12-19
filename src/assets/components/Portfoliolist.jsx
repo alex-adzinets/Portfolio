@@ -16,8 +16,8 @@ const Portfoliolist = (props) => {
         {
             number: '02',
             title: 'AI Magix Homepage',
-            description:'An Intdustial standard home page,web page,developed using Angular ⛈️',
-            link:''
+            description:'Helped to Create an Intdustial standard home page,web page,developed using Angular ⛈️',
+            link:'https://aimagix.com/'
         },
         3:
         {
@@ -31,7 +31,7 @@ const Portfoliolist = (props) => {
             number: '04',
             title: 'OTPfiy',
             description:'Your lightning-fast OTP solution for small projects, ditching complexity for instant verification magic. ✨',
-            link: ''
+            link: 'https://github.com/gururock007/OTPfiy'
         },
     }
     
@@ -61,6 +61,8 @@ const Portfoliolist = (props) => {
                         // eslint-disable-next-line react/prop-types
                         onMouseLeave={props.setCursorState[1]}
                         variants={variantBox}
+                        whileHover={{scale:1.03, transition:{type: 'spring', stiffness:400, damping:13, duration: 0.5}}} 
+                        whileTap={{scale:0.9}} 
                         className=" border-b-2 grid grid-cols-8 pt-4 pb-4 gap-5 items-center">
                         <div className=" md:text-6xl text-2xl font-Eklektyk ">
                             {data[key].number}
@@ -68,7 +70,7 @@ const Portfoliolist = (props) => {
                         <div className=" font-Eklektyk md:text-5xl text-xl md:col-span-3 col-span-5">
                             {data[key].title}
                         </div>
-                        <div className="text-start md:text-lg text-sm md:col-span-3 col-span-6">
+                        <div className=" font-ClashDisplay text-start md:text-lg text-sm md:col-span-3 col-span-6">
                             {data[key].description}
                         </div>
                         <motion.div  className=' flex justify-end col-span-2 md:col-span-1'>

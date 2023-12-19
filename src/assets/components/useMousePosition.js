@@ -1,7 +1,6 @@
 
 import { useEffect, useState } from 'react'
 
-// https://medium.com/@jaredloson/custom-javascript-cursor-in-react-d7ffefb2db38
 const useMousePosition = () => {
     const [position, setPosition] = useState({x: 0, y: 0})
     const [isvisible, setIsvisible] = useState(false)

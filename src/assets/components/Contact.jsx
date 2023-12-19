@@ -14,27 +14,21 @@ const Contact = (props) => {
     props.setCursorState((perval) => ({...perval,state:'default'}))
     }
 
-    const btnVarition = {
-        initial: {y:0, transition: {duration: 0.7}},
-        onhover: { y: 50, transition:{duration: 0.7}}
-    }
-    
-
   return (
     <section>
-    <motion.div className=" container pt-48 mx-auto text-white">
+    <motion.div viewport={{once:true}}  initial ='inital' whileInView='final' className="font-ClashDisplay container pt-48 mx-auto text-white">
         <div className=" p-5  pb-14">
-            <div className=" md:text-8xl text-4xl font-Eklektyk">
+            <motion.div className=" md:text-8xl text-4xl font-Eklektyk">
                 Let&apos;s team up to 
-            </div>
-            <div className=" md:text-8xl text-4xl font-Eklektyk">
+            </motion.div>
+            <motion.div className=" md:text-8xl text-4xl font-Eklektyk">
                 create something <span className=" font-GreatVibes inline">{(screen.width < 450) ? <br />: null}{( 800 < screen.width && screen.width < 1300) ? <br />: null}<RedoAnimText /></span><CursorBlinker/>
-            </div>
-            <div className=" text-3xl ">
+            </motion.div>
+            <motion.div className=" text-3xl ">
                 I&apos;m the perfect travel companion.
-            </div>
+            </motion.div>
         </div>
-        <div className=" p-5 pt-14 text-3xl" id="contact">
+        <div className="  p-5 pt-14 text-3xl" id="contact">
             Get in Touch
         </div>
         <div className=" grid grid-cols-12 gap-4 ps-5 pe-5 pb-12 ">
@@ -46,21 +40,30 @@ const Contact = (props) => {
                     GurushikJayakumar@gmail.com
                 </a>
             </div>
-            <div className=" md:col-span-2 col-span-5 md:text-end">
-                <motion.a 
-                variants={btnVarition} whileHover='onhover' initial= 'initial'
+            <motion.div
+            whileHover={{scale:1.1, transition:{type: 'spring', stiffness:400, damping:13, duration: 0.5}}} 
+            whileTap={{scale:0.9}}
+            className=" md:col-span-2 col-span-5 md:text-end">
+                <a 
                 href="https://github.com/gururock007" 
+                target="_blank"
+                rel=" noopener noreferrer"
                 onMouseEnter={setHover} 
                 onMouseLeave={setDefault}  
                 className="  text-white  text-decoration-none socials-link">
-                    <span 
-                    className=" border-2 text-lg rounded-full p-2 ps-4 pe-4">
-                    Git Hub
+                    <span className=" border-2 text-lg rounded-full p-2 ps-4 pe-4">
+                        Git Hub
                     </span>
-                </motion.a>
-            </div>
-            <div className="md:col-span-2 col-span-6">
-                <a href="https://www.linkedin.com/in/gurushik-jayakumar/"
+                </a>
+            </motion.div>
+            <motion.div 
+            whileHover={{scale:1.1, transition:{type: 'spring', stiffness:400, damping:13, duration: 0.5}}} 
+            whileTap={{scale:0.9}}
+            className="md:col-span-2 col-span-6">
+                <a 
+                href="https://www.linkedin.com/in/gurushik-jayakumar/"
+                target="_blank"
+                rel="noopener noreferrer"
                 onMouseEnter={setHover} 
                 onMouseLeave={setDefault}  
                  className=" text-white text-decoration-none socials-link">
@@ -68,7 +71,7 @@ const Contact = (props) => {
                         LinkedIn
                     </span>
                 </a>
-            </div>
+            </motion.div>
         </div>
     </motion.div>
 </section>

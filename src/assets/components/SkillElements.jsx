@@ -11,7 +11,7 @@ const SkillElements = (props) => {
 
   return (
     <div className=' text-white p-4'>
-        <div className=" text-2xl font-Eklektyk pb-2 "> {props.title}</div>
+        <div className=" text-2xl font-ClashDisplay font-medium pb-2 "> {props.title}</div>
         <motion.div
           viewport={{once:true, amount: 0.5}}
           initial = 'inital'
@@ -21,7 +21,7 @@ const SkillElements = (props) => {
           {props.lists.map((program) => (
             <motion.div
             variants={variantBox}
-            className=' text-xl border-b-[0.1px] p-3 font-LandRover'
+            className=' text-xl border-b-[0.1px] p-3 font-ClashDisplay font-light'
             key={program}>
               {program}
             </motion.div>

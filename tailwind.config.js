@@ -9,9 +9,9 @@ export default {
       fontFamily:{
         RockSalt: ['RockSalt'],
         Eklektyk: ['Eklektyk Stencil'],
-        Inter:['Inter'],
         LandRover:['Land Rover OT4'],
         GreatVibes:['Great-vibes'],
+        ClashDisplay:['ClashDisplay']
       },
       backgroundImage:{
         me: "url('/images/me.png')",

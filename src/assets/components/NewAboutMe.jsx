@@ -23,7 +23,7 @@ const NewAboutMe = () => {
             <div className=' sticky top-[10vh]'>
                 <div className=' flex justify-center'>
                     <motion.div style={{ opacity, scale,x}} className=' origin-top'>
-                        <img  className='md:h-[75vh] h-[50vh]' src={vsme} alt="" />
+                        <img  className='md:h-[75vh] h-[45vh]' src={vsme} alt="" />
                     </motion.div>
                 </div>
             </div>

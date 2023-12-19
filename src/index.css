@@ -10,11 +10,59 @@
     font-family: 'Great-vibes';
     src: url(/fonts/great-vibes/GreatVibes-Regular.ttf);
 }
+
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('/fonts/clashdisplay/fonts/ClashDisplay-Bold.woff2') format('woff2'),
+         url('/fonts/clashdisplay/fonts/ClashDisplay-Bold.woff') format('woff'),
+         url('/fonts/clashdisplay/fonts/ClashDisplay-Bold.ttf') format('truetype');
+         font-weight: bolder;
+         font-display: swap;
+         font-style: normal;
+}
+
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('/fonts/clashdisplay/fonts/ClashDisplay-Medium.woff2') format('woff2'),
+         url('/fonts/clashdisplay/fonts/ClashDisplay-Medium.woff') format('woff'),
+         url('/fonts/clashdisplay/fonts/ClashDisplay-Medium.ttf') format('truetype');
+         font-weight:500;
+         font-display: swap;
+         font-style: normal;
+  }
+  
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('/fonts/clashdisplay/fonts/ClashDisplay-Regular.woff2') format('woff2'),
+         url('/fonts/clashdisplay/fonts/ClashDisplay-Regular.woff') format('woff'),
+         url('/fonts/clashdisplay/fonts/ClashDisplay-Regular.ttf') format('truetype');
+         font-weight: normal;
+         font-display: swap;
+         font-style: normal;
+}
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('/fonts/clashdisplay/fonts/ClashDisplay-Semibold.woff2') format('woff2'),
+         url('/fonts/clashdisplay/fonts/ClashDisplay-Semibold.woff') format('woff'),
+         url('/fonts/clashdisplay/fonts/ClashDisplay-Semibold.ttf') format('truetype');
+         font-weight: bold;
+         font-display: swap;
+         font-style: normal;
+}  
+
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('/fonts/clashdisplay/fonts/ClashDisplay-Light.woff2') format('woff2'),
+         url('/fonts/clashdisplay/fonts/ClashDisplay-Light.woff') format('woff'),
+         url('/fonts/clashdisplay/fonts/ClashDisplay-Light.ttf') format('truetype');
+         font-weight:300;
+         font-display: swap;
+         font-style: normal;
+}
+
 @layer base {
     @import url(/fonts/eklektyk/stylesheet.css);
-    @import url(../public/fonts/LandRover/stylesheet.css);    
-    /*@import url(../public/fonts/neutraface/stylesheet.css);
-    @import url(../public/fonts/Inter/stylesheet.css); */
+    @import url(../public/fonts/LandRover/stylesheet.css);
 }
 
 ::selection{

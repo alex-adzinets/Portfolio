@@ -11,7 +11,7 @@ const Skill = () => {
 
   return (
     <div  className="">
-    <div className=" text-center text-3xl ps-5 text-white font-LandRover pt-20">
+    <div className=" text-center text-3xl ps-5 text-white font-ClashDisplay font-bold pt-20">
       <AnimatedText text={"MY"} staggerSpeed={0.3} animationType={"fadeInDown"} durations={0.7} />
       <span> </span>
       <AnimatedText text={"SKILL"} staggerSpeed={0.3} animationType={"fadeInDown"} durations={0.7} />

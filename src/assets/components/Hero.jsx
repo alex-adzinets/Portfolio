@@ -57,13 +57,13 @@ const Hero = (props) => {
       <motion.div variants={fadeInRight} className=' md:text-3xl text-2xl md:pt-0 pt-8 font-RockSalt'>
         Gurushik Jayakumar
       </motion.div>
-      <div className=' pt-28 md:text-9xl text-5xl font-semibold'>
+      <div className=' pt-28 md:text-9xl text-5xl font-semibold font-ClashDisplay'>
         <AnimatedText text="FRONTEND" animationType="fadeInUp" durations={0.7} staggerSpeed={0.2} />
       </div>
-      <div className=' pt-2 ps-10 md:text-9xl text-5xl font-semibold Deleloper text-transparent'>
+      <div className=' pt-2 ps-10 md:text-9xl text-5xl font-semibold Deleloper font-ClashDisplay text-transparent'>
         <AnimatedText text="DEVELOPER" animationType="fadeInUp" durations={0.7} staggerSpeed={0.2} />
       </div>
-      <motion.div variants = {fadeInLeft} className=' pt-10 pe-10 text-right text-2xl font-medium'>
+      <motion.div variants = {fadeInLeft} className=' pt-10 pe-10 text-right text-2xl font-ClashDisplay font-medium'>
         <span onMouseEnter={setHover} onMouseLeave={setDefault}>OPEN TO WORK</span>
       </motion.div>
       <div className='pt-32 pb-20 flex justify-center gap-2'>
