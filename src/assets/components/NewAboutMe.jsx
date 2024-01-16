@@ -19,7 +19,7 @@ const NewAboutMe = () => {
   return (
     <>
     <section className='mt-[20vh]'>
-        <div ref={ref} className='h-[300rem] w-full'>
+        <div ref={ref} className='md:h-[200rem] h-[100rem] w-full'>
             <div className=' sticky top-[10vh]'>
                 <div className=' flex justify-center'>
                     <motion.div style={{ opacity, scale,x}} className=' origin-top'>

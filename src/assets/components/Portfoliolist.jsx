@@ -22,16 +22,16 @@ const Portfoliolist = (props) => {
         3:
         {
             number: '03',
-            title: 'Mobile Prediction',
-            description:'Python-based model predicts smartphone prices with scikit-learn. Trained on features like RAM, camera, and battery, with data from a diverse device set.⚡️',
-            link:'https://github.com/gururock007/mobile_price_prediction_model'
+            title: 'OTPfiy',
+            description:'Your lightning-fast OTP solution for small projects, ditching complexity for instant verification magic. ✨',
+            link: 'https://github.com/gururock007/OTPfiy'
         },
         4:
         {
             number: '04',
-            title: 'OTPfiy',
-            description:'Your lightning-fast OTP solution for small projects, ditching complexity for instant verification magic. ✨',
-            link: 'https://github.com/gururock007/OTPfiy'
+            title: 'Mobile Prediction',
+            description:'Python-based model predicts smartphone prices with scikit-learn. Trained on features like RAM, camera, and battery, with data from a diverse device set.⚡️',
+            link:'https://github.com/gururock007/mobile_price_prediction_model'
         },
     }
     

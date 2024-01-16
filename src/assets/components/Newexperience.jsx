@@ -54,7 +54,7 @@ const Newexperience = () => {
                     </motion.div>
                     <motion.div style={{opacity:opacity2}} className=" px-4 pb-10 border-l-2">
                         <div className="lg:text-4xl md:text-2xl font-ClashDisplay font-medium">
-                            Machine Learning Intern
+                            Worked on Machine Learning
                         </div>
                         <motion.div style={{}} className=" font-ClashDisplay font-light text-sm">
                         <div>2023, sept -2023, Nov</div>
