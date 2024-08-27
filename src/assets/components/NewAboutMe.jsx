@@ -2,6 +2,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import vsme from '/images/vsme.png'
 import { useRef } from 'react'
+import AIchartbot from './AIchartbot'
 const NewAboutMe = () => {
     const ref = useRef(null)
     const {scrollYProgress} = useScroll({
@@ -22,9 +23,12 @@ const NewAboutMe = () => {
         <div ref={ref} className='md:h-[200rem] h-[100rem] w-full'>
             <div className=' sticky top-[10vh]'>
                 <div className=' flex justify-center'>
-                    <motion.div style={{ opacity, scale,x}} className=' origin-top'>
+                    <div className=' text-white text-3xl'>
+                        <AIchartbot></AIchartbot>
+                    </div>
+                    {/* <motion.div style={{ opacity, scale}} className=' origin-top'>
                         <img  className='md:h-[75vh] h-[45vh]' src={vsme} alt="" />
-                    </motion.div>
+                    </motion.div> */}
                 </div>
             </div>
         </div>
