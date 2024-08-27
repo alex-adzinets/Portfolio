@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 import download from '/images/icons/download.png'
 import scrollDown from '/images/icons/down-arrow.png'
 import AnimatedText from "./AnimatedText"
-import CV from '/Gurushik_resume.pdf'
+import CV from '/Gurushik_Resume.pdf'
 
 const Hero = (props) => {
 

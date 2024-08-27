@@ -1,15 +1,18 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import Markdown from 'react-markdown'
 
-
 const AIchartbot = () => {
 
-    const genAI = new GoogleGenerativeAI("AIzaSyDYH8ql3Zx4ld-fqSqHwC52izmt9gJUm00");
+    const genAI = new GoogleGenerativeAI(`${import.meta.env.VITE_GEMINI_AI_API}`);
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash"});
 
     const [question, setQuestion] = useState('')
     const [response, setResponse] = useState('')
+
+    const [chatHistory, setChatHistory] = useState([]);
+    const chatRef = useRef(null);
+  
   
     function handleForm (event) {
       setQuestion(() => (event.target.value))
@@ -76,7 +79,6 @@ Helped the blind chess Champs to guide through the event conducted by Velammal s
 let system_prompt = 
 `
 1. **Introduction:**
-  - Always initiate the response with a polite and professional greeting.
   - Clearly state that the assistant is an AI-powered representation of Gurushik.
 
 2. **Content Referral:**
@@ -158,51 +160,76 @@ Guidelines:
           Promotional or marketing content
           Self-referential statements (e.g., "I am an AI")
 `
-    async function run() {  
-        const prompt = `resume data: ${resume_data} system propmt: ${system_prompt} user: ${question}`;
-        const result = await model.generateContent(prompt);
-        const res = await result.response;
-        setResponse(res.text);
-        const text = res.text();
-        console.log(text);
-    }     
+      function handleForm(event) {
+    setQuestion(event.target.value);
+  }
 
-    const handleSubmit = async (event) =>{
-        event.preventDefault();
-        setResponse('typing...')
-        try {
-            run();
-        } catch (error) {
-          console.log(error)
-        }
+  const run = async () => {
+    const prompt = `resume data: ${resume_data} system prompt: ${system_prompt} user: ${question}`;
+    const result = await model.generateContent(prompt);
+    return result.response.text();
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    if (!question.trim()) return; // Prevent empty submissions
+
+    const userMessage = question;
+    setChatHistory(prevHistory => [...prevHistory, { type: 'user', text: userMessage }]);
+    setQuestion(''); // Clear input field
+
+    setChatHistory(prevHistory => [...prevHistory, { type: 'ai', text: 'typing...' }]);
+    
+    try {
+      const aiResponse = await run();
+      setChatHistory(prevHistory => prevHistory.slice(0, -1).concat({ type: 'ai', text: aiResponse }));
+    } catch (error) {
+      console.error(error);
+      setChatHistory(prevHistory => prevHistory.slice(0, -1).concat({ type: 'ai', text: 'Error generating response' }));
+    }
+  };
+
+  // Auto-scroll to the bottom when new messages are added
+  useEffect(() => {
+    if (chatRef.current) {
+      const { scrollHeight, clientHeight, scrollTop } = chatRef.current;
+      const isNearBottom = scrollHeight - scrollTop <= clientHeight + 100;
+      if (isNearBottom) {
+        chatRef.current.scrollTop = chatRef.current.scrollHeight;
       }
+    }
+  }, [chatHistory]);
+
   return (
     <>
-        <div className=' md:w-3/4 mx-auto w-5/6 rounded-lg h-[50vh] border-white border-2 text-white'>
-            <div className=' h-5/6 p-10 overflow-y-scroll'>
-                <div> 
-                    { response ? 
-                    <Markdown className=' bg-slate-700 backdrop-blur-lg inline-block p-3 rounded-lg' >{response}</Markdown> :
-                        <p className=' bg-slate-700 backdrop-blur-lg inline-block p-3 rounded-lg'>
-                            hi im an Ai chart bot
-                        </p>
-                    }
-                </div>
-                <div className=' text-right'>
-                    <p className=' bg-gray-500 backdrop-blur-lg p-3 inline-block rounded-lg'>
-                        hi this is user 
-                    </p>
-                </div>
+      <div className='md:w-3/4 mx-auto w-5/6 rounded-lg h-[50vh] border-white border-2 text-white'>
+        <div className='h-5/6 p-10 overflow-y-scroll' ref={chatRef}>
+          {chatHistory.map((message, index) => (
+            <div key={index} className={`${message.type === 'user' ? 'text-right' : 'text-left'} mb-4`}>
+              <p className={`backdrop-blur-lg p-3 inline-block rounded-lg ${message.type === 'user' ? 'bg-gray-500' : 'bg-slate-700'}`}>
+                {message.type === 'ai' ? <Markdown>{message.text}</Markdown> : message.text}
+              </p>
             </div>
-            <form onSubmit={handleSubmit}>
-                <div className=' container mx-auto text-center align-bottom'> 
-                    <input type="text" name="Question" onChange={handleForm} className=' p-5 outline-none w-8/12 rounded-3xl h-10 bg-gray-700 ' placeholder='Start typing' />
-                    <button type="submit" className=' py-2 rounded-full bg-slate-800 w-2/12'>submit</button>
-                </div>
-            </form>
+          ))}
         </div>
+        <form onSubmit={handleSubmit}>
+          <div className='container mx-auto text-center'>
+            <input
+              type='text'
+              name='Question'
+              value={question}
+              onChange={handleForm}
+              className='p-5 outline-none w-8/12 rounded-3xl h-10 bg-gray-700'
+              placeholder='Start typing'
+            />
+            <button type='submit' className='py-2 rounded-full bg-slate-800 w-2/12'>
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default AIchartbot
+export default AIchartbot;
