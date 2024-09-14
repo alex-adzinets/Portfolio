@@ -13,14 +13,14 @@ const AiAboutMe = ( props ) => {
 
   return (
     <div className=' container mx-auto grid grid-cols-2 mt-[20vh] mb-[20vh]'>
-        <div className=' lg:col-span-1 col-span-2 text-white text-3xl text-center'>
+        <div className=' lg:col-span-1 col-span-2 text-white text-3xl text-center grid grid-flow-row auto-rows-max'>
             <div
             onMouseEnter={setHover}
             onMouseLeave={setDefault} 
             className = " text-5xl font-medium font-ClashDisplay">
-                Little About Me
+                Little About Me 
             </div>
-            <div className='text-xl items-center flex font-light font-LandRover p-3 h-[45vh] '>
+            <div className='lg:text-xl md:text-lg text-sm items-center flex font-light font-LandRover p-3 h-[45vh] '>
                 <p 
                 onMouseEnter={setHover}
                 onMouseLeave={setDefault} >

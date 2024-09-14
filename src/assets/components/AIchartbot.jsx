@@ -193,12 +193,19 @@ Guidelines:
   useEffect(() => {
     if (chatRef.current) {
       const { scrollHeight, clientHeight, scrollTop } = chatRef.current;
-      const isNearBottom = scrollHeight - scrollTop <= clientHeight + 100;
+      const isNearBottom = scrollHeight - scrollTop <= clientHeight + 50; // Adjust this value to be more or less sensitive
       if (isNearBottom) {
-        chatRef.current.scrollTop = chatRef.current.scrollHeight;
+        chatRef.current.scrollTop = scrollHeight; // Scroll to the bottom
       }
     }
   }, [chatHistory]);
+  
+  useEffect(() => {
+    if (chatRef.current) {
+      chatRef.current.scrollTop = chatRef.current.scrollHeight;
+    }
+  }, [chatHistory]);
+    
 
   return (
     <>
