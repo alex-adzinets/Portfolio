@@ -2,6 +2,7 @@
 
 This website serves as a comprehensive showcase of my skills and experience, built using a dynamic blend of cutting-edge technologies:
 Check out the My Profolio Here : https://gurushik.netlify.app/
+
 **Tech Stack:**
 
 * **React:** The JavaScript library for building dynamic user interfaces.
