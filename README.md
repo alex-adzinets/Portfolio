@@ -1,7 +1,7 @@
 ## Welcome to my Portfolio 
 
 This website serves as a comprehensive showcase of my skills and experience, built using a dynamic blend of cutting-edge technologies:
-Check out the My Profolio Here : https://gurushik.netlify.app/
+Check out My Profolio Here : https://gurushik.netlify.app/
 
 **Tech Stack:**
 
