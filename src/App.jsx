@@ -11,7 +11,6 @@ import Contact from './assets/components/Contact'
 import NewAboutMe from './assets/components/NewAboutMe'
 import Newexperience from './assets/components/Newexperience'
 import AiAboutMe from './assets/components/AiAboutMe'
-import AboutSection from './assets/components/AboutSection'
 
 function App( ) {
 
@@ -34,7 +33,6 @@ function App( ) {
     <main className=' lg:cursor-none'>
         {screen.width > 500 &&  <Cursor cursorState = {cursorState} />}
         <Hero setCursorState = {setCursorState} />
-        <AboutSection setCursorState={setCursorState} />
         {/* <NewAboutMe setCursorState = {setCursorState} /> */}
         <AiAboutMe setCursorState = {setCursorState} />
         {/* <Aboutme setCursorState={setCursorState} /> */}
