@@ -1,0 +1,93 @@
+/* Custom styles for AboutMeSection component */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
+
+/* Font family utilities */
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-goldman {
+  font-family: 'Goldman', cursive;
+}
+
+/* Custom heading styles matching Figma specs */
+.about-heading {
+  font-size: clamp(3rem, 8vw, 88px);
+  font-weight: 400;
+  line-height: 1.21;
+  letter-spacing: -0.02em;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ME text with special border styling */
+.about-me-text {
+  opacity: 0;
+  border: 3px solid #000000;
+  -webkit-text-stroke: 3px #000000;
+  text-stroke: 3px #000000;
+}
+
+/* Description text styling */
+.about-description {
+  font-family: 'Goldman', cursive;
+  font-size: clamp(18px, 2.5vw, 28px);
+  font-weight: 400;
+  line-height: 1.2;
+  -webkit-text-stroke: 1px transparent;
+  text-stroke: 1px transparent;
+}
+
+/* Mobile responsive heading size */
+@media (max-width: 768px) {
+  .about-heading {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+  }
+  
+  .about-description {
+    font-size: clamp(16px, 4vw, 24px);
+  }
+}
+
+/* Portrait image container styling */
+.portrait-container {
+  position: relative;
+  overflow: hidden;
+  max-width: 524px;
+  aspect-ratio: 524/704;
+}
+
+/* Smooth image loading transition */
+.portrait-image {
+  transition: opacity 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Loading state for image */
+.portrait-image.loading {
+  opacity: 0;
+}
+
+/* Loaded state for image */
+.portrait-image.loaded {
+  opacity: 1;
+}
+
+/* Optional hover effect for portrait */
+@media (hover: hover) {
+  .portrait-container:hover .portrait-image {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+  }
+}
+
+/* Ensure proper text rendering */
+.text-stroke {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: transparent;
+}
