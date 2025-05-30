@@ -1,6 +1,5 @@
 import React from 'react';
-import { render, screen, waitFor } from '@testing-library/react';
-import { describe, it, expect, vi } from 'vitest';
+import { render, screen } from '@testing-library/react';
 import AboutMeSection from './AboutMeSection';
 
 // Mock framer-motion
@@ -33,7 +32,7 @@ describe('AboutMeSection', () => {
     
     const image = screen.getByAltText('Portrait of the person in a casual setting');
     expect(image).toBeInTheDocument();
-    expect(image).toHaveAttribute('src', './assets/13_7.png');
+    expect(image).toHaveAttribute('src', '/src/assets/components/assets/13_7.png');
   });
 
   it('has proper accessibility attributes', () => {

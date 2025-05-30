@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import AnimatedText from '../src/assets/components/AnimatedText.jsx';
+import AnimatedText from './AnimatedText.jsx';
 
 const AboutMeSection = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -16,7 +16,7 @@ const AboutMeSection = () => {
   };
 
   // Image source - actual asset path
-  const imageSource = "./assets/13_7.png";
+  const imageSource = "/src/assets/components/assets/13_7.png";
 
   // Animation variants
   const textVariants = {
