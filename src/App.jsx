@@ -8,7 +8,7 @@ import Portfolio from './assets/components/Portfolio'
 import Loader from './assets/components/Loader'
 import Contact from './assets/components/Contact'
 // import Experience from './assets/components/Experience'
-import AboutMeSection from './assets/components/AboutMeSection'
+import NewAboutMe from './assets/components/NewAboutMe'
 import Newexperience from './assets/components/Newexperience'
 import AiAboutMe from './assets/components/AiAboutMe'
 
@@ -33,8 +33,9 @@ function App( ) {
     <main className=' lg:cursor-none'>
         {screen.width > 500 &&  <Cursor cursorState = {cursorState} />}
         <Hero setCursorState = {setCursorState} />
-        <AboutMeSection setCursorState={setCursorState} />
+        {/* <NewAboutMe setCursorState = {setCursorState} /> */}
         <AiAboutMe setCursorState = {setCursorState} />
+        {/* <Aboutme setCursorState={setCursorState} /> */}
         <Skill setCursorState = {setCursorState} />
         {/* <Experience setCursorState = {setCursorState} /> */}
         <Newexperience setCursorState = {setCursorState} />
