@@ -1,7 +1,7 @@
 
 ## 🧙 AutonomyAI's Magician Code Generation
 Run Date: May 30, 2025  
-Design Source: https://www.figma.com/design/ArTAldhibQMnhdyUXWfuPK/Portfolio--Copy-?node-id=14-11&t=LVbhUrWNKf4OTGNu-4  
+Design Source: https://www.figma.com/design/ArTAldhibQMnhdyUXWfuPK/Portfolio--Copy-?node-id=14-11&t=dF3xq3LGYz2SwNzy-4  
 Component improvement feature is off.
 
 ### 🗂 Table of Contents
@@ -14,41 +14,41 @@ Component improvement feature is off.
 
 # Design Work
 ## 🛠 UI Implementation Overview
-- Implemented two-column responsive layout using CSS Grid with text content on left and portrait image on right
-- Created large "ABOUT ME" heading with mixed styling - solid white "ABOUT" text and outlined black stroke "ME" text
-- Applied black background with white text to match the monochromatic design aesthetic
-- Integrated AnimatedText component for heading animations with fadeInRight/fadeInLeft effects
-- Added grayscale filter to portrait image to maintain black and white visual consistency
-- Implemented responsive breakpoints that stack content vertically on mobile devices
-- Used custom CSS classes for precise typography matching Inter and Goldman fonts from design
-- Added smooth hover effects and loading optimizations for enhanced user experience
+- Implemented two-column responsive grid layout using CSS Grid with lg:grid-cols-2 for desktop and stacked mobile layout
+- Created mixed typography effect for "ABOUT ME" heading with solid white "ABOUT" and outlined black "ME" text
+- Applied custom CSS module styling for text-stroke outline effect with fallback support for older browsers
+- Integrated grayscale filter on portrait image to match the black and white aesthetic from Figma
+- Used responsive typography scaling from text-6xl to text-8xl across breakpoints for proper heading hierarchy
+- Implemented proper spacing with container mx-auto, padding utilities, and gap-8 lg:gap-16 for column separation
+- Added order utilities (order-1/order-2) to control mobile stacking with image first, text second
+- Applied Inter and Goldman fonts via CSS imports with proper font-smoothing for crisp text rendering
 
 ## 🧠 User-Defined Business Logic Summary
-- Dynamic content loading capability with configurable text content from CMS or props
-- Responsive behavior that stacks content vertically on mobile with image scaling and typography adjustments
-- Performance optimizations including lazy loading for portrait images and progressive enhancement
-- Accessibility features with meaningful alt text, proper heading hierarchy, and focus management
-- Reusable AboutSection component design accepting props for heading, description, image source and styling variants
-- Content separated from presentation logic for easy updates without code changes
-- Error boundaries and loading states for graceful handling of dynamic content and image failures
-- Self-contained but flexible component design suitable for different contexts
+- Single-state about section with two-column design featuring large mixed typography heading and portrait photo
+- Content should be configurable via props or CMS with support for dynamic text and image replacement
+- Responsive behavior transitions from two-column desktop to vertically stacked mobile layout
+- Image optimization considerations include lazy loading and maintaining consistent aspect ratios
+- Accessibility requirements include descriptive alt text, proper heading hierarchy, and sufficient contrast
+- Typography hierarchy maintains heading prominence across all screen sizes with mixed solid/outlined styling
+- Performance optimization focuses on image loading with skeleton states for better user experience
+- Component accepts props for aboutText, portraitImage object, and configurable headingLevel
 
 ## 🤖 Inferred Business Logic Summary (LLM)
-- Content data structure organized as configurable object with heading, description, imageUrl and imageAlt properties
-- Animation system using AnimatedText component with staggered timing and directional effects
-- CSS custom animations with fadeInUp keyframes for description text with delayed execution
-- Responsive font sizing using clamp() function for fluid typography across device sizes
-- Image optimization with object-cover positioning and overflow handling for consistent aspect ratios
-- Mobile-first responsive design with order changes and spacing adjustments per breakpoint
-- Custom CSS properties for text stroke effects and webkit compatibility
-- Hover interactions on desktop with scale transforms and smooth transitions
+- AnimatedText component integration provides staggered text reveal animations with fadeInRight effect
+- CSS animation system includes textReveal keyframes for paragraph content with 0.5s delay timing
+- Font loading strategy uses Google Fonts CDN with display=swap for optimal performance
+- Image handling includes object-cover positioning and lazy loading attribute for performance
+- Responsive design breakpoints follow mobile-first approach with md: and lg: prefixes
+- Text rendering optimization includes antialiasing and optimizeLegibility properties
+- Fallback styling system provides text-shadow alternative for browsers without text-stroke support
+- Component structure follows functional component pattern with default export convention
 
 ## ✅ Remaining Implementation Tasks
-- Import and configure the AnimatedText component dependency in the project
-- Add the portrait image asset (13_7.png) to the correct assets directory
-- Configure custom fonts (Inter, Goldman) in Tailwind config or ensure Google Fonts loading
-- Import and apply the AboutMeSection.css stylesheet to the component
-- Test responsive behavior across different device sizes and adjust spacing if needed
-- Integrate the component into the main application routing or page structure
-- Replace Lorem ipsum content with actual about me text and professional portrait
-- Add proper error handling for missing image assets and content loading states
+- Create or import the AnimatedText component referenced in the code but not provided
+- Add the portrait image asset (13_7.png) to the correct assets directory structure
+- Configure Tailwind CSS to recognize custom font classes or update to use CSS module classes
+- Implement proper error handling for missing image assets with fallback placeholder
+- Add PropTypes or TypeScript interfaces for component props validation
+- Create unit tests following project standards using React Testing Library
+- Optimize CSS module imports to follow project's Tailwind-first approach
+- Consider implementing skeleton loading states for image and text content
