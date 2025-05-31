@@ -1,6 +1,6 @@
 import './App.css'
 import Hero from './assets/components/Hero'
-import AboutMeSection from './assets/components/AboutMeSection'
+// import Aboutme from './assets/components/Aboutme'
 import Skill from './assets/components/Skill'
 import Cursor from './assets/components/Cursor' 
 import { useEffect, useState } from 'react'
@@ -35,7 +35,7 @@ function App( ) {
         <Hero setCursorState = {setCursorState} />
         {/* <NewAboutMe setCursorState = {setCursorState} /> */}
         <AiAboutMe setCursorState = {setCursorState} />
-         <AboutMeSection setCursorState={setCursorState} /> 
+        {/* <Aboutme setCursorState={setCursorState} /> */}
         <Skill setCursorState = {setCursorState} />
         {/* <Experience setCursorState = {setCursorState} /> */}
         <Newexperience setCursorState = {setCursorState} />
