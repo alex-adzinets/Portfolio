@@ -1,7 +1,12 @@
 ## Welcome to my Portfolio 
 
-This website serves as a comprehensive showcase of my skills and experience, built using a dynamic blend of cutting-edge technologies:
-Check out My Profolio Here : https://gurushik.netlify.app/
+This website serves as a comprehensive showcase of my skills and experience, built using a dynamic blend of cutting-edge technologies.
+
+Check out my Portfolio here : https://gurushik.netlify.app
+
+**Want to see the design inspiration?**
+
+Check out the Figma file for the initial design concepts behind this website (cloned from the original): https://www.figma.com/design/gz92k4ZzakicxRPmpUcVTt/Portfolio
 
 **Tech Stack:**
 
@@ -22,10 +27,6 @@ Framer Motion brings your portfolio to life with subtle and impactful animations
 * **Full showcase of skills:** 
 This website demonstrates my proficiency in various web development technologies and design principles.
 
-**Want to see the design inspiration?**
-
-Check out the Figma file for the initial design concepts behind this website: https://www.figma.com/file/3Z1ldcJ53585KhTnorHUcr/Portfolio?type=design&node-id=0%3A1&mode=dev
-
 **Ready to dive in?**
 
 Explore the different sections of my portfolio to learn more about my expertise, my projects, and my professional journey. Feel free to reach out if you have any questions!
@@ -37,5 +38,6 @@ Explore the different sections of my portfolio to learn more about my expertise,
 * LinkedIN: https://www.linkedin.com/in/gurushik-jayakumar/
 
 **Remember, this is just a starting point!** 
+
 Feel free to personalize this text to reflect your unique voice and skills. You can also add sections showcasing specific projects, testimonials, or any other information that helps potential employers or collaborators understand your value.
 
